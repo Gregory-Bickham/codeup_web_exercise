@@ -1,0 +1,57 @@
+/*Style sheet for resume*/
+
+/
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  text-align: left;
+  margin-top: 250px;
+}
+
+.body_style{
+	
+	background-image: url(/img/retina_wood.png);
+ 	font-size: 16px;
+
+}
+
+.h_style{
+	text-decoration: underline;
+	}
+
+.h_center{
+	text-align: center;
+	}
+
+.p_right{
+	text-align: right;
+}
+
+.profile_pic{
+	border-radius: 25px;
+    background: url(/img/mr-t.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px; 
+    width: 400px;
+    height: 250px;
+    background-size: 500px;
+    margin: 70px 70px 70px 20px;
+    float: left;
+}
+
+.nav_style{
+	background-color: #3498db;
+}
+	
+.header_style {  
+	font-size: 48px;
+	text-align: center;
+
+}
+
+.section_style{
+	border-radius: 25px;
+	background-color: #ECF6CE;
+}

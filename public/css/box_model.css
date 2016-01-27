@@ -1,0 +1,53 @@
+/*Style guide for Visible Spectrum Box exercise*/
+
+.h_style{
+	font-size: 36px;
+	font: italic bold;
+	text-decoration: underline;
+}
+.text_style{
+	color: white;
+	font: bold;
+	text-shadow: 2px 2px #2E2E2E;
+}
+.box_size{
+	height: 50px;
+	width: 150px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.red_box{
+	background-color: #d84231;
+
+}
+
+.orange_box{
+	background-color: #eaae33;
+	margin-left: 30px;
+}
+
+.yellow_box{
+	background-color: #fdf733;
+	margin-left: 60px;
+}
+
+.green_box{
+	background-color: #578c05;
+	margin-left: 90px;
+}
+
+.blue_box{
+	background-color: #234afb;
+	margin-left: 120px;
+}
+
+.violet_box{
+	background-color: #df8bf0;
+	margin-left: 150px;
+}
+
+
+section #red {
+
+}
