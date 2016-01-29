@@ -10,7 +10,8 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+  margin: 15;
+  padding-top: 50px;
 }
 article,
 aside,

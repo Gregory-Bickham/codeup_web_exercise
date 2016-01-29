@@ -1,19 +1,23 @@
 /*Style sheet for resume*/
 
-/
-body {
-  padding-top: 50px;
+#container1 {
+	position: relative;
 }
+
+
 .starter-template {
   text-align: left;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 
 .body_style{
 	
-	background-image: url(/img/retina_wood.png);
+	background-image: url(/img/bodega_head_north.jpg);
  	font-size: 16px;
-
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+ 	background-size: cover;
 }
 
 .h_style{
@@ -32,17 +36,12 @@ body {
 	border-radius: 25px;
     background: url(/img/mr-t.jpeg);
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px; 
+    background-repeat: no-repeat; 
     width: 400px;
     height: 250px;
     background-size: 500px;
-    margin: 70px 70px 70px 20px;
+    margin: 70px 70px 20px 20px;
     float: left;
-}
-
-.nav_style{
-	background-color: #3498db;
 }
 	
 .header_style {  
@@ -54,4 +53,8 @@ body {
 .section_style{
 	border-radius: 25px;
 	background-color: #ECF6CE;
+}
+.logo_layout{
+    background-position: center;
+    background-repeat: no-repeat;
 }
