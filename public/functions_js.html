@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions</title>
+</head>
+<body>
+    <script type="text/javascript">	
+    "use strict";
+
+
+    var varA = prompt("What is your first number?");
+    var varB = prompt("What is your second number?");
+    	
+    function isNumeric(x, y){
+        if (isNaN(x) || isNaN(y)){
+            alert("Not a number.");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+    function sum(x, y){	
+        if (isNumeric(x,y)){
+    	   return parseFloat(x) + parseFloat(y);
+    	} else {
+            return false;
+        } 
+    }
+    console.log(sum(varA, varB));
+
+    function difference(x, y){ 
+        if (isNumeric(x,y)){
+           return parseFloat(x) - parseFloat(y);
+        } else {
+            return false;
+        } 
+    }
+    console.log(difference(varA, varB));
+
+    function product(x, y){ 
+        if (isNumeric(x,y)){
+           return parseFloat(x) * parseFloat(y);
+        } else {
+            return false;
+        } 
+    }
+    console.log((varA, varB));
+
+
+
+    </script>
+
+</body>
+</html>

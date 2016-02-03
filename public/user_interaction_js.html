@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Interaction</title>
+</head>
+<body>
+<script type="text/javascript">
+	'use strict'
+
+	var pizza = prompt("Do you like pizza?");
+	pizza = pizza.trim();
+
+	while (pizza == "" || pizza == null) {
+		pizza = prompt("Do you like pizza?");
+
+	}
+	if (pizza == "yes"){
+			alert('Yes. Me too! Did you know that pizza is an anagram for zizpa?');
+	} else {
+			alert('No?! Well, have you ever tried zizpa?');
+	}
+
+</script>    
+
+</body>
+</html>
