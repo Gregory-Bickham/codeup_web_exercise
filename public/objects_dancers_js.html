@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>objects_dancers_js</title>
+</head>
+<body>
+    <script>
+       
+       var dance = {
+       		"moves": ["mashed potato", "monster mash", "detroit pimp", "heel click"],
+       		"dancers": ["michael jackson", "ryan orsinger", "james brown"],
+       		"tempo": "150bpm",
+
+       		performance: function(){
+       			return this.getRandomDancer() + " does the " + this.getRandomMove() + "!";
+       		},
+
+       		getRandomDancer: function(){
+       			var getRandomDancerIndex = Math.floor(Math.random() * this.dancers.length);
+       			return this.dancers[getRandomDancerIndex];
+       		},
+
+       		getRandomMove: function(){
+       			var getRandomMoveIndex = Math.floor(Math.random() * this.moves.length);
+       			return this.moves[getRandomMoveIndex];
+       		},
+
+       		setTempo: function(){
+       			var new_tempo = prompt("How many beats per minute(bpm)?");
+       			console.log(new_tempo);
+
+       			if (new_tempo != null) {
+       				new_tempo = new_tempo.trim();
+       			}
+       			while (new_tempo == null || new_tempo == ""){
+       				new_tempo = prompt("Please enter a valid BPM value.");
+       				
+       				if (new_tempo != null){
+       					new_tempo = new_tempo.trim();
+       				}
+       				console
+       			}
+       			this.tempo = new_tempo + "bpm";
+       			alert("New tempo set to " + this.tempo);
+       		}
+       }
+
+      console.log(dance.performance());
+      dance.setTempo();
+      console.log(dance.performance());
+
+    </script>
+</body>
+</html>

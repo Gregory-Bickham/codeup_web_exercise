@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Maps</title>
+
+    <!-- Bootstrap core CSS -->
+   <!--  <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
+
+     <!-- Custom styles for this template -->
+    <link href="/css/maps.css" rel="stylesheet">
+
+
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSsfYcVMwmDhlXr2OUvavyXZiowysq4KU"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 18,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.4284595,
+                lng: -98.492433
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        var addressLookerUpper = new google.maps.Geocoder();
+        var codeUpAddress = { lat: 29.428459, lng: -98.492433 };
+        var marker = new google.maps.Marker({position: codeUpAddress, map: map, draggable: true, animation: google.maps.Animation.DROP});
+        var infowindow = new google.maps.InfoWindow({content: 'Some kid came up to us with weed and asked us if we wanted to be part of the revolution...<img id="infoImg" src="/img/SuhDude.jpg">'});
+
+        infowindow.open(map, marker);
+
+        // addressLookerUpper.geocode({address : codeUpAddress}, function(results, status){
+        //     if (status == google.maps.GeocoderStatus.OK) {
+
+        //         // Recenter the map over the address
+        //         map.setCenter(results[0].geometry.location);
+        //     } else {
+        //         alert("Geocoding was not successful - STATUS: " + status);
+        //     }
+        // });
+
+    })();
+    </script>
+</body>

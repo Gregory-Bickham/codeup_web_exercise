@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline JS</title>
+</head>
+<body>
+    <script>
+ 
+var circle = {
+    radius: 3,
+    getArea: function () {
+        return Math.PI * Math.pow(this.radius, 2); 
+    },
+    logInfo: function (round) {
+        if(round){
+        	console.log(Math.round(this.getArea()));
+
+        } else{
+        	console.log('Area of a circle with radius: ' + this.radius + ', is: ' + this.getArea());
+        }
+        
+    }
+};
+
+circle.logInfo(false);
+circle.logInfo(true);
+circle.radius = 5;
+circle.logInfo(false);
+circle.logInfo(true);
+    </script>
+</body>
+</html>

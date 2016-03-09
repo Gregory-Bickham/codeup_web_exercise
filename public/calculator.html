@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/calculator.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <h3>Calculator</h3>
+    
+    <div class="button-area-line">
+        <input id="leftField">
+        <input id="operator">
+        <input id="rightField">
+    </div>
+
+        
+    <div class="button-area">
+        <a id="allClear" class="button-area">A/C</a>
+        <a id="clear" class="button-area">C</a>
+        <a id="posNeg" class="button-area">+/-</a>
+        <a id="divide" class="button-area opButtons">/</a>
+        <a class="numbers button-area">1</a>
+        <a class="numbers button-area">2</a>
+        <a class="numbers button-area">3</a>
+        <a id="multiply" class="button-area opButtons">*</a>
+        <a class="numbers button-area">4</a>
+        <a class="numbers button-area">5</a>
+        <a class="numbers button-area">6</a>
+        <a id="addition" class="button-area opButtons">+</a>
+        <a class="numbers button-area">7</a>
+        <a class="numbers button-area">8</a>
+        <a class="numbers button-area">9</a>
+        <a id="subtraction" class="button-area opButtons">-</a>
+        <a class="numbers button-area">0</a>
+        <a id="decimal" class="button-area">.</a>   
+        <a class="button-area opButtons">^</a>
+        <a id="percent" class="button-area opButtons">%</a>
+        <a class="button-area opButtons">MOD</a>
+        <a id="equals" class="button-area">=</a>
+    </div>
+   
+    <script>
+      "use strict"
+    var numbers = document.getElementsByClassName("numbers");
+    var leftField = document.getElementById("leftField");
+    var operator = document.getElementById("operator");
+    var rightField = document.getElementById("rightField");
+    var opButtons = document.getElementsByClassName("opButtons");
+    var equalButton = document.getElementById("equals");
+    var percentButton = document.getElementById("percent");
+    var activeField = leftField;
+
+    var displayNumbers = function(event){
+        activeField.value += this.innerText;
+        console.log(this);
+    }
+    var displayOperator = function(event){
+        if (leftField.value != "") {
+            operator.value = this.innerText;
+        };
+        activeField = rightField;
+        console.log(this);
+    }
+    var evaluate = function(event){
+        var lF = parseFloat(leftField.value);
+        var rF = parseFloat(rightField.value);
+        var oP = operator.value; 
+
+    var resetField = function(event){
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+
+    }
+
+    if (lF == "" || rF == "" || oP == "") {
+            return;
+        };
+    if (oP == "+") {
+        leftField.value = lF + rF;
+        
+    } else if(oP == "-"){
+        leftField.value = lF - rF;
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+    } else if (oP == "*"){
+        leftField.value = lF * rF;
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+    } else if(oP == "/"){
+        leftField.value = lF / rF;
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+    } else if(oP == "MOD"){
+        leftField.value = lF % rF;
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+    } else if(oP == "^"){
+        leftField.value = Math.pow(lF, rF);
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+    } else if(oP == "%"){
+        leftField.value = parseFloat((lF) / 100) * parseFloat(rF);
+        operator.value = "";
+        rightField.value = "";
+        activeField = leftField;
+        }
+    }
+    // var percent = function(event){
+    //     var temp = parseFloat((leftField.value) / 100); 
+    //     console.log(leftField.value);
+    //     console.log(temp);
+    //     // var result = percent(leftField.value, 100);
+    //     leftField.value = temp;
+    //     operator.value = "";
+        
+    // }
+
+    for (var i = 0; i < numbers.length; i++) {
+        numbers[i].addEventListener("click", displayNumbers);
+    };
+    for (var i = 0; i < opButtons.length; i++) {
+        opButtons[i].addEventListener("click", displayOperator);
+    };
+    equalButton.addEventListener("click", evaluate);
+    percentButton.addEventListener("click", percent);
+    </script>
+<script>
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+    });
+ 
+    $( window ).load(function() {
+        console.log( "window loaded" );
+    });
+    </script>
+</body>
+</html>

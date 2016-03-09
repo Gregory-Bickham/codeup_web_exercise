@@ -8,28 +8,20 @@
 <script>
 "usestrict";	
 	
-	// declare and initialize array
-var names = ['Greg', 'Kya', 'King', 'Rudy'];
+var fruits = ['banana', 'apple', 'lemon']
 
-// There are 4 shapes in the array
-console.log('There are ' + names.length + ' names in the array');
+fruits.push('kiwi');
 
-// The first shape is: square
-console.log('The first name is: ' + names[0]);
+console.log(fruits);
 
-// The second shape is: rectangle
-console.log('The second name is: ' + names[1]);
+var lastFruit = fruits.pop();
+fruits.unshift(lastFruit);
 
-// The third name is: circle
-console.log('The third name is: ' + names[2]);
+console.log(fruits);
 
-// The fourth name is: triangle
-console.log('The fourth name is: ' + names[3]);
-  
+fruits.unshift(fruits.pop());
 
-
-
-
+console.log(fruits);
 
 </script>
 </body>

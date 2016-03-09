@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline JS</title>
+</head>
+<body>
+    <script>
+     	// todo:
+// Copy the array of planets you created in the last lesson.
+var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
+
+function join(array, delimiter){
+	var string = "";
+
+	array.forEach(function(element, index){
+		if (string !="") {
+			string = string + delimiter;
+		}
+		string = string + element;
+	});
+	return string;
+}
+	var result = join(planets, ",");
+	console.log(result);
+    </script>
+</body>
+</html>

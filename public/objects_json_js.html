@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+     
+    // todo:
+    var books = [
+        {
+            "title": "Animal Farm",
+            "author": {
+                "firstName": "George",
+                "lastName": "Orwell"
+            }
+
+        },
+        {
+            "title": "JavaScript, the Good Parts",
+            "author": {
+                "firstName": "Douglas",
+                "lastName": "Crawford"
+            }
+
+        },
+        {
+            "title": "Animal Farm",
+            "author": {
+                "firstName": "George",
+                "lastName": "Orwell"
+            }
+
+        },
+        {
+            "title": "Animal Farm",
+            "author": {
+                "firstName": "George",
+                "lastName": "Orwell"
+            }
+
+        },
+        {
+            "title": "Animal Farm",
+            "author": {
+                "firstName": "George",
+                "lastName": "Orwell"
+            }
+
+        }
+    ];
+// Create an array of objects that represent books.
+// Each book should have a title and an author.
+// The book author should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+// var books = [todo];
+
+// log out the books array
+console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+
+
+// start loop here
+//    console.log("Book #" + todo);
+//books.forEach(function(book, index, array){
+  //  console.log("Title: " + book.title);
+    //console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    //console.log("---");
+//});
+// end loop here
+
+
+var arrayOfStrings = [];
+
+books.forEach(function(book, index, array){
+    string = book.title + " " + "was written by:" + " " + book.author.firstName + " " + book.author.lastName;
+    arrayOfStrings.push(string);
+});
+
+arrayOfStrings.forEach(function(string, index, array){
+    console.log(string);
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+       "use script"
+
+       var car = {
+       		"make": "Chevy",
+       		"model": "Corvette",
+       		"years": [1999, 1985, 1967],
+
+       		"honk":function() {
+       			return "HONK HONK";
+       		},
+
+       		"getMakeAndModel": function(){
+       			return "The car is a " + this.make + " " + this.model;
+       		},
+
+       		"getFirstYear": function(){
+       			var yearsInOrder = this.years.sort();
+       			return yearsInOrder[0];
+       		}
+       	}
+
+       console.log(car.getMakeAndModel());
+    </script>
+</body>
+</html>
