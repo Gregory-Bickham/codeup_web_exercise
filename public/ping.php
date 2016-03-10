@@ -1,11 +1,11 @@
 <?php
 
-require_once 'functions.php';
+require_once 'Input.php';
 
 function pageController()
 {
-    if(inputGet($counter)){
-        $counter = inputHas($counter);
+    if(Input::Get($counter)){
+        $counter = Input::Has($counter);
     } else{
         $counter = 0;
     }
